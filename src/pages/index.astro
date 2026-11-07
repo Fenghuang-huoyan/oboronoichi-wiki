@@ -1,0 +1,250 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@framework/layouts/BaseLayout.astro';
+import QuickAnswer from '@framework/components/QuickAnswer.astro';
+import AdSlot from '@framework/components/AdSlot.astro';
+import FaqList from '@framework/components/FaqList.astro';
+import { loadData } from '@framework/lib/content';
+import { siteConfig } from '@site/site.config';
+import { faqJsonLd, websiteJsonLd } from '@framework/lib/seo';
+
+const meta = loadData<{
+  release: string;
+  price: string;
+  priceNote: string;
+  players: string;
+  playersNote: string;
+  reviews: string;
+  reviewsNote: string;
+  modes: string;
+  modesNote: string;
+  platforms: string;
+}>('meta');
+
+const faq = loadData<{ q: string; a: string; featured?: boolean }[]>('faq');
+const pages = (await getCollection('pages'))
+  .filter((page) => page.data.order < 10)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const art = {
+  header: '/images/official/steam/header.jpg',
+  hero: '/images/official/steam/library-hero.jpg',
+  hero2x: '/images/official/steam/library-hero-2x.jpg',
+  capsule: '/images/official/steam/capsule-616x353.jpg',
+  wide: '/images/official/steam/ss-00.jpg',
+  stall: '/images/official/steam/ss-01.jpg',
+  roofs: '/images/official/steam/ss-03.jpg',
+  row: '/images/official/steam/ss-04.jpg',
+  counter: '/images/official/steam/ss-05.jpg',
+};
+
+const guideArt: Record<string, string> = {
+  guide: art.wide,
+  market: art.counter,
+  build: art.row,
+  stalls: art.stall,
+};
+
+const doors = [
+  {
+    href: '/guide',
+    num: '01',
+    title: 'Guide',
+    text: 'What Oboro no Ichi is, the Early Access plan, the 9 November 2026 date, and the fact table from Steam.',
+    image: art.wide,
+  },
+  {
+    href: '/market',
+    num: '02',
+    title: 'Market',
+    text: 'Memories, wandering spirits, and the Open Market button the screenshots show. No invented price list.',
+    image: art.counter,
+  },
+  {
+    href: '/build',
+    num: '03',
+    title: 'Build',
+    text: 'Stalls, buildings, and pathways, and the balance of beauty and function the store actually describes.',
+    image: art.row,
+  },
+  {
+    href: '/stalls',
+    num: '04',
+    title: 'Stalls',
+    text: 'The one job Steam gives a structure. No stall names, recipes, or yields, because none are published.',
+    image: art.stall,
+  },
+];
+
+const stills = [
+  { src: art.wide, caption: 'Night market' },
+  { src: art.stall, caption: 'A selected stall' },
+  { src: art.row, caption: 'Stalls along the paths' },
+  { src: art.roofs, caption: 'Roofs and lanterns' },
+];
+---
+<BaseLayout
+  title={siteConfig.homeTitle}
+  description={siteConfig.homeDescription}
+  jsonLd={[
+    websiteJsonLd(),
+    faqJsonLd(faq.filter((item) => item.featured).map((item) => ({ q: item.q, a: item.a }))),
+  ]}
+>
+  <main id="content">
+    <div class="shell">
+      <p class="tape">
+        <span>Fan guide · not affiliated with TheLaba or Valve</span>
+        <span>Steam App {siteConfig.steamAppId}</span>
+        <span>{siteConfig.version.label}</span>
+      </p>
+
+      <section class="town-hero">
+        <img
+          class="hero-art"
+          src={siteConfig.art.hero}
+          srcset={`${art.hero} 1920w, ${art.hero2x} 3840w`}
+          sizes="(min-width: 1536px) 1536px, 100vw"
+          alt={siteConfig.art.heroAlt}
+          width="1920"
+          height="620"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-panel">
+          <p class="kicker">{siteConfig.developer} · Early Access · {meta.release}</p>
+          <h1>Oboro no Ichi</h1>
+          <p class="lede">
+            English pages for Oboro no Ichi: a spiritual market inspired by Japan, wandering spirits, and a cozy loop of production and sales.
+            The full game is still marked coming soon. Where a stall name or a price was never printed, the page says so.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="/guide">Guide</a>
+            <a class="btn ghost" href="/market">Market</a>
+            <a class="btn ghost" href="/build">Build</a>
+            <a class="btn ghost" href="/stalls">Stalls</a>
+            <a class="btn ghost" href={siteConfig.steamUrl}>View on Steam</a>
+          </div>
+          <p class="version-note">{siteConfig.version.detail}</p>
+        </div>
+      </section>
+      <p class="art-credit">
+        Library hero, capsules, header, and screenshots are official Steam store assets for App {siteConfig.steamAppId}, saved from the store CDN.
+        Credits and source URLs: <a href="/images/official/steam/ATTRIBUTION.txt">ATTRIBUTION.txt</a>.
+      </p>
+
+      <section class="section">
+        <h2>Start here</h2>
+        <p class="section-intro">
+          The overview, the market, the build notes, or the stall boundary. There is no codes page. The sources checked do not list a redeem program.
+        </p>
+        <div class="door-grid">
+          {doors.map((door) => (
+            <a class="door" href={door.href}>
+              <span class="card-art">
+                <img src={door.image} alt="" width="600" height="318" decoding="async" />
+                <span class="num">{door.num}</span>
+              </span>
+              <span class="card-copy">
+                <h3>{door.title}</h3>
+                <p>{door.text}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section" aria-label="Official Steam screenshots">
+        <h2>The store’s own frames</h2>
+        <p class="section-intro">
+          Four screenshots from the Steam page for Oboro no Ichi: a wide night market, a selected stall, a row of stalls, and another roof line. They are promotional frames, not a structure catalog.
+        </p>
+        <div class="still-row">
+          {stills.map((still) => (
+            <figure>
+              <img src={still.src} alt="" width="600" height="318" loading="lazy" decoding="async" />
+              <figcaption>{still.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section class="stat-row" aria-label="Steam figures">
+        <div class="stat"><strong>{meta.price}</strong><span>{meta.priceNote}</span></div>
+        <div class="stat"><strong>{meta.reviews}</strong><span>{meta.reviewsNote}</span></div>
+        <div class="stat"><strong>{meta.players}</strong><span>{meta.playersNote}</span></div>
+        <div class="stat"><strong>{meta.modes}</strong><span>{meta.modesNote}</span></div>
+      </section>
+
+      <section class="section home-quick">
+        <QuickAnswer
+          sentences={[
+            'Oboro no Ichi is a simulation from TheLaba, who is also the publisher, on Steam (AppID 4559930). The store date is 9 November 2026. On 7 November 2026 the appdetails payload still marked it coming soon, on Windows and macOS, and not free.',
+            'The short description says you build and manage a spiritual market inspired by Japan, welcome wandering spirits, produce and sell resources, and grow the space through memories and a cozy atmosphere.',
+            'A free demo, app 5271720, is attached to the store page and marked released on 23 September 2026. Its own platform list is Windows only. This site has not played it.',
+            'There is no redeem-code list. Stall names and recipes are not printed on the store page, so this guide does not invent them.',
+          ]}
+        />
+        <AdSlot name="afterQuickAnswer" />
+      </section>
+
+      <section class="section">
+        <h2>The pages</h2>
+        <p class="section-intro">
+          English only. A line from the Steam page or the 13 May 2026 devlog is labeled with that date. A missing stat stays missing.
+        </p>
+        <div class="card-grid">
+          {pages.map((page) => (
+            <a class="guide-card" href={`/${page.id}`}>
+              <span class="card-art">
+                <img src={guideArt[page.id] ?? art.header} alt="" width="600" height="318" loading="lazy" decoding="async" />
+              </span>
+              <span class="card-copy">
+                <span class="section-tag">{page.data.section}</span>
+                <h3>{page.data.h1}</h3>
+                <p>{page.data.description}</p>
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="scope">
+          <div>
+            <h2>What this wiki is for</h2>
+            <p>
+              The store page and the developer’s post live at {siteConfig.databases.map((db, i) => (
+                <>
+                  <a href={db.href}>{db.label}</a>
+                  {i < siteConfig.databases.length - 1 ? ', ' : ''}
+                </>
+              ))}. This site is the skim: the spiritual market, the build loop, and the stall sentence those sources actually use.
+            </p>
+            <p>
+              The Early Access unlock is {meta.release}. If the client and this page disagree, trust the client.
+            </p>
+          </div>
+          <div>
+            <h2>In Steam’s words</h2>
+            <p>
+              {siteConfig.developer} is the developer and the publisher. Platforms on the full-game API: {meta.platforms}. Genres: Casual, Indie, Simulation, and Early Access. The support email on the store page is thelabaofficial@gmail.com. The support URL field was empty.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-faq">
+        <h2>Short answers</h2>
+        <FaqList featuredOnly />
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  @media (min-width: 900px) {
+    .door-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+</style>

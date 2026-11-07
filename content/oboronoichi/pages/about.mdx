@@ -1,0 +1,58 @@
+---
+title: "About the Oboro no Ichi Guide — Unofficial Fan Site"
+description: "oboronoichi.wiki is an unofficial English fan guide for Oboro no Ichi by TheLaba. What the pages cover, how sources are dated, and where the legal notes live."
+h1: "About the Oboro no Ichi guide"
+section: "About"
+order: 10
+verifiedAgainst: "Site policy for oboronoichi.wiki, plus the Steam store page and appdetails API checked 7 Nov 2026."
+quickAnswer:
+  - "Oboro no Ichi Guide is a fan site at https://oboronoichi.wiki. It is not affiliated with TheLaba, Valve, or Steam."
+  - "Pages are English on purpose. Steam lists nine languages. This wiki writes in one."
+  - "The name on the site is always the full title, Oboro no Ichi. Artwork is official Steam store art for AppID 4559930, with a credit file beside the images."
+  - "Google Analytics is not loaded, because analytics.gaId is empty. An Adsterra Native Banner for oboronoichi.wiki loads after the quick answer. There is no redeem-code page."
+sources:
+  - label: "Steam store — Oboro no Ichi"
+    url: "https://store.steampowered.com/app/4559930/Oboro_no_Ichi/"
+  - label: "Devlog 1 — The Market of Memories"
+    url: "https://steamcommunity.com/app/4559930/announcements/detail/1832700592787094"
+related:
+  - href: "/guide"
+    label: "Guide"
+  - href: "/disclaimer"
+    label: "Disclaimer"
+  - href: "/privacy"
+    label: "Privacy"
+  - href: "/"
+    label: "Home"
+banner: "/images/official/steam/header.jpg"
+bannerAlt: "Official Steam header for Oboro no Ichi, the full title over a lantern-lit waterside stall and a torii"
+---
+
+import Callout from '@framework/components/Callout.astro';
+
+This is a short English wiki for **Oboro no Ichi**, Steam AppID **4559930**, built as a static site for **oboronoichi.wiki**.
+
+The pages that describe the game are the [guide](/guide), the [market](/market) note, the [build](/build) note, and the [stalls](/stalls) note. Each one quotes the Steam store page, the appdetails payload from 7 November 2026, or the 13 May 2026 devlog. A figure appears only when one of those sources printed it.
+
+## What “checked” means
+
+<Callout kind="note" title="A read date, not a playtest">
+“Checked 7 Nov 2026” means the Steam API, the English store page, and the linked announcement were read that day. It does not mean someone played the Early Access build. The game was still marked coming soon. The free demo (app 5271720) was already listed as released, and this site has not played that either.
+</Callout>
+
+The support email on the Steam store page is thelabaofficial@gmail.com. The support URL field was empty, and the website field was null. That inbox belongs to TheLaba, not to this wiki.
+
+Legal text lives on [Disclaimer](/disclaimer). Tracking lives on [Privacy](/privacy). The footer repeats both in short form.
+
+## Images
+
+Library hero, library capsule, hero capsule, the store header, the capsules, and the screenshots are official Steam store assets for AppID 4559930, downloaded from the Steam CDN and served from this site so pages do not hotlink Steam. Paths and source URLs are in [ATTRIBUTION.txt](/images/official/steam/ATTRIBUTION.txt). The favicon is an original lantern drawn for this site. It is not the Steam client icon.
+
+## What is still unpublished
+
+- A numeric Steam price. `is_free` is false and `package_groups` was empty on 7 November 2026. Early Access is described as discounted, with no amount.
+- A named stall list, any recipe, or any yield.
+- A market-hour schedule. “Market hours” appears only as a full-version plan.
+- A controller category. The payload’s controller list was empty.
+- An achievements count. The payload had no achievements block.
+- Anything inside the demo or the trailers that the written store text does not also say.

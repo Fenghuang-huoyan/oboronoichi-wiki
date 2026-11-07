@@ -1,0 +1,38 @@
+[
+  {
+    "q": "When does Oboro no Ichi release?",
+    "a": "Steam’s release_date field on 7 November 2026 is 9 Nov 2026, with coming_soon true. The store page calls that the planned Early Access unlock. The same page showed no user reviews.",
+    "featured": true
+  },
+  {
+    "q": "Who develops and publishes Oboro no Ichi?",
+    "a": "The Steam appdetails payload lists TheLaba as both developer and publisher. In the Early Access questionnaire TheLaba describes the project as the work of a solo developer. This wiki is not affiliated with TheLaba, or with Valve.",
+    "featured": true
+  },
+  {
+    "q": "What kind of game is Oboro no Ichi?",
+    "a": "Steam’s short description says you build and manage a spiritual market inspired by Japan, welcome wandering spirits, produce and sell resources, and grow the space through memories and a cozy atmosphere. Genres are Casual, Indie, Simulation, and Early Access. The only player category is Single-player.",
+    "featured": true
+  },
+  {
+    "q": "Is there a redeem code page?",
+    "a": "No. The English Steam store page and the 13 May 2026 community announcement do not publish a redeem-code program. This site does not invent codes, and it does not have a codes page.",
+    "featured": true
+  },
+  {
+    "q": "Is there a demo?",
+    "a": "Yes. On 7 November 2026 the full game’s store data listed a standalone demo, app 5271720, shown above the purchase option. That app’s own page is type demo, free, release date 23 Sep 2026, coming_soon false, and Windows only. This site has not played it."
+  },
+  {
+    "q": "Can I play Oboro no Ichi on Mac or Linux?",
+    "a": "The full game’s platforms field on 7 November 2026 lists Windows and macOS, and Linux false. Windows minimum is Windows 10 64-bit, 4 GB RAM, and 5 GB of disk. macOS minimum is macOS 12 Monterey on an Apple M1, 8 GB RAM, and 5 GB of disk. The demo’s own platforms field lists Windows only."
+  },
+  {
+    "q": "Is there a price yet?",
+    "a": "Not as a number. appdetails on 7 November 2026 has is_free false and an empty package_groups list. The Early Access section says the game will be discounted during Early Access and does not print the amount."
+  },
+  {
+    "q": "Is this site official?",
+    "a": "No. oboronoichi.wiki is a fan guide. It is not affiliated with TheLaba, Valve, or Steam. The support email on the Steam store page is thelabaofficial@gmail.com. That mailbox is the developer’s, not this wiki’s."
+  }
+]

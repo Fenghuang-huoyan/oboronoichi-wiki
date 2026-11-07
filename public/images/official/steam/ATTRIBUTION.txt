@@ -1,0 +1,75 @@
+Official Steam store assets for Oboro no Ichi (AppID 4559930).
+Self-hosted so the wiki does not hotlink the Steam CDN at page-view time.
+The bytes were downloaded from the Steam store CDN on 7 Nov 2026.
+Asset paths come from the Steam appdetails payload (header_image, capsule_image, screenshots)
+and from the store asset hashes published for this app.
+Fan site: not affiliated with TheLaba, Valve, or Steam.
+Store page: https://store.steampowered.com/app/4559930/Oboro_no_Ichi/
+CDN host used for these downloads: https://shared.akamai.steamstatic.com/store_item_assets/
+Cache token on these files: t=1793168399
+
+The site favicon is an original lantern mark for oboronoichi.wiki. It is not a Steam asset.
+
+library-hero.jpg
+  Steam library hero, 1920x620
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/bc31033564e335306a38b728cf2d21ce7e7bd431/library_hero.jpg?t=1793168399
+
+library-hero-2x.jpg
+  Steam library hero, 3840x1240
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/bc31033564e335306a38b728cf2d21ce7e7bd431/library_hero_2x.jpg?t=1793168399
+
+library-capsule.jpg
+  Steam library capsule, 300x450
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/90a7fc171eb00315d15e6ed147f338c1ebaca2ba/library_capsule.jpg?t=1793168399
+
+hero-capsule.jpg
+  Steam hero capsule, 374x448
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/a3e54b0e918ff55f4d17bb45119bb0bd7a4f6102/hero_capsule.jpg?t=1793168399
+
+header.jpg
+  Classic store header, 460x215
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/f0fbf6e5b3c0cca4d8df11cddac36eed839afcd5/header.jpg?t=1793168399
+
+capsule-616x353.jpg
+  Store capsule, 616x353
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/3e773506444d6b45afa3fbb8db025776fdabd022/capsule_616x353.jpg?t=1793168399
+
+capsule-231x87.jpg
+  Small store capsule, 231x87
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/7395121e70f65a65666a83e50c57a092ba523ca9/capsule_231x87.jpg?t=1793168399
+
+Screenshots are the 600x318 store thumbnails from appdetails on 7 Nov 2026 (t=1793168399).
+Full-size 1920x1080 files exist at the same paths with .1920x1080.jpg. This site stores the thumbnails.
+They are promotional frames. This guide does not turn them into a stall catalog or a price list.
+
+ss-00.jpg
+  Wide isometric view of a lantern-lit market of wooden buildings and stone paths.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/8fd2dc7e2dcaba2647252c6a41fc39f4071dc7bf/ss_8fd2dc7e2dcaba2647252c6a41fc39f4071dc7bf.600x338.jpg?t=1793168399
+
+ss-01.jpg
+  A selected wooden stall with a details panel and item icons.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/dbc63ec3e1d157048bea815de0da6f6787da922d/ss_dbc63ec3e1d157048bea815de0da6f6787da922d.600x338.jpg?t=1793168399
+
+ss-02.jpg
+  Closer view of a lit building, a standing sign, and a small figure.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/4c6a95c982ed4c748d204e0acd44d1f2e6f64936/ss_4c6a95c982ed4c748d204e0acd44d1f2e6f64936.600x338.jpg?t=1793168399
+
+ss-03.jpg
+  Another wide market of tiled roofs, paths, and lantern strings.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/119185f6b250e277803f86cb03b2829cc6886a7f/ss_119185f6b250e277803f86cb03b2829cc6886a7f.600x338.jpg?t=1793168399
+
+ss-04.jpg
+  A denser row of stalls and buildings along stone paths.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/c171467a74fde589bc4c6c1fc32035a1ec9a580b/ss_c171467a74fde589bc4c6c1fc32035a1ec9a580b.600x338.jpg?t=1793168399
+
+ss-05.jpg
+  A close view of one stall with several small figures gathered in front.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/7cf0ce3df56a6fe1bb1b489ce7d72aad5129f283/ss_7cf0ce3df56a6fe1bb1b489ce7d72aad5129f283.600x338.jpg?t=1793168399
+
+ss-06.jpg
+  A path between lit buildings, with small figures in the lane.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/7a65cabe2e76256505364f0a32c94cf1264203a1/ss_7a65cabe2e76256505364f0a32c94cf1264203a1.600x338.jpg?t=1793168399
+
+ss-07.jpg
+  A build palette open over a stone path beside the water.
+  https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4559930/6a18fb377c103a8a29363cd8c6aa27391de5dd23/ss_6a18fb377c103a8a29363cd8c6aa27391de5dd23.600x338.jpg?t=1793168399

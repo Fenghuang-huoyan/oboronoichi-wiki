@@ -1,0 +1,12 @@
+{
+  "release": "9 Nov 2026",
+  "price": "9 Nov 2026",
+  "priceNote": "Steam release date. appdetails on 7 Nov 2026 still marked the game coming soon. is_free is false, and package_groups was empty, so no public price was in that payload.",
+  "players": "Single-player",
+  "playersNote": "The only player category in appdetails is Single-player. This is not a live player count.",
+  "reviews": "Win + Mac",
+  "reviewsNote": "Full-game platforms on 7 Nov 2026: Windows and macOS true, Linux false. The demo app lists Windows only. The store page showed no user reviews.",
+  "modes": "Early Access",
+  "modesNote": "Genres are Casual, Indie, Simulation, and Early Access. The store text is a cozy spiritual market you build and manage.",
+  "platforms": "Windows and macOS"
+}
