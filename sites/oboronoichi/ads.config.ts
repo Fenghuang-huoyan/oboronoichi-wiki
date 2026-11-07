@@ -4,7 +4,7 @@
  *
  * Zone and script are this domain's own Get Code. Do not paste a key or host from another game.
  * Adult and sensitive categories stay off. The 404 page does not render a slot.
- * analytics.gaId in site.config.ts stays an empty string.
+ * analytics.gaId in site.config.ts is G-5GWDW6J29L. The base layout loads that GA4 tag.
  */
 export type AdSlotConfig = {
   id: string;

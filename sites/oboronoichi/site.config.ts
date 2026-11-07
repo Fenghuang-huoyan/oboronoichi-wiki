@@ -25,7 +25,7 @@ export const siteConfig = {
   homeDescription:
     'Unofficial English guide to Oboro no Ichi (Steam AppID 4559930). TheLaba’s cozy spiritual market sim, Early Access on 9 Nov 2026. Not affiliated with TheLaba or Valve.',
   analytics: {
-    gaId: '',
+    gaId: 'G-5GWDW6J29L',
   },
   art: {
     hero: '/images/official/steam/library-hero.jpg',

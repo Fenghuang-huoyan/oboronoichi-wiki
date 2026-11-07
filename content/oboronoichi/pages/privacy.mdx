@@ -1,13 +1,13 @@
 ---
 title: "Privacy — Oboro no Ichi Guide"
-description: "Privacy for oboronoichi.wiki, the unofficial Oboro no Ichi fan guide. Static pages, no accounts, no Google Analytics, and one Adsterra banner for this domain."
+description: "Privacy for oboronoichi.wiki, the unofficial Oboro no Ichi fan guide. Static pages, no accounts, Google Analytics 4 (G-5GWDW6J29L) on content pages, and one Adsterra banner for this domain."
 h1: "Privacy for the Oboro no Ichi guide"
 section: "Privacy"
 order: 11
 verifiedAgainst: "Site policy for oboronoichi.wiki as published in this repository. Analytics and ad config checked with the 7 Nov 2026 build."
 quickAnswer:
   - "oboronoichi.wiki is a static fan guide for Oboro no Ichi. It has no accounts and does not ask for a Steam login."
-  - "analytics.gaId is an empty string, so the layout does not load Google Analytics."
+  - "Google Analytics 4 (G-5GWDW6J29L) loads on content pages."
   - "An Adsterra Native Banner for oboronoichi.wiki loads after the quick answer. The zone is this domain’s own. No advertising script from another game is included."
   - "The same note is in the footer of every page. The legal disclaimer is a separate page."
 sources:
@@ -36,14 +36,14 @@ Pages you request are served as ordinary documents. This repository does not add
 
 ## Analytics
 
-`analytics.gaId` in the site config is an empty string. The base layout prints the Google Analytics snippet only when that string is non-empty. With it empty, no gtag script is sent to the browser.
+GA4 `G-5GWDW6J29L` is set in `analytics.gaId`. The base layout loads that tag on content pages.
 
 ## Advertising
 
 The Native Banner slot after the quick answer is **on** for oboronoichi.wiki. `enabled` is true. The zone id is `f9b8506a57b1d692e4617638e4743a17`. The script loads from `https://bauval.org/21/f9b8506a57b1d692e4617638e4743a17`. The container id is `container-f9b8506a57b1d692e4617638e4743a17`. Adult and sensitive categories stay off. The 404 page does not render a slot.
 
 <Callout kind="note" title="This domain only">
-That zone is the Get Code for oboronoichi.wiki. This repository does not carry a measurement id or an ad zone from any other game site. Google Analytics stays off because `analytics.gaId` is empty.
+That zone is the Get Code for oboronoichi.wiki. This repository does not carry a measurement id or an ad zone from any other game site. Google Analytics 4 (`G-5GWDW6J29L`) loads on content pages.
 </Callout>
 
 Steam, Discord, YouTube, and the other official links in the footer are ordinary outbound links. Their own sites set their own cookies once you leave this one. The support address thelabaofficial@gmail.com is TheLaba’s, printed on the Steam page, and mail there is not received by this wiki.
