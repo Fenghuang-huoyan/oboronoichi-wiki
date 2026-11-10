@@ -26,7 +26,7 @@ Node 22. The build is a static Astro site (`dist/`). `astro.config.mjs` sets `si
 | Content | `content/oboronoichi/` | Guide pages and JSON |
 | Routes | `src/pages/` | Home, guide slug, 404 |
 
-`analytics.gaId` is an empty string, so the base layout does not load GA4. The Adsterra Native Banner after Quick Answer is enabled for oboronoichi.wiki only. See [ADS.md](ADS.md).
+`analytics.gaId` is `G-5GWDW6J29L`, so the base layout loads GA4 on content pages. The Adsterra Native Banner after Quick Answer is enabled for oboronoichi.wiki only. See [ADS.md](ADS.md).
 
 Steam art lives in `public/images/official/steam/` with `ATTRIBUTION.txt`. This repository does not buy a domain, edit DNS, or deploy. Vercel can serve the static `dist/` output.
 
